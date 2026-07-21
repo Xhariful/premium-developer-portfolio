@@ -40,12 +40,10 @@ export function CtaSection({
         </Reveal>
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            {/* @ts-expect-error Link's `to` is typed against the route tree; the caller passes strings that are valid routes */}
-            <Link to={primaryTo} className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105">
+            <Link to={primaryTo as string} className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105">
               {primaryLabel} <FiArrowUpRight className="transition-transform group-hover:rotate-45" />
             </Link>
-            {/* @ts-expect-error see above */}
-            <Link to={secondaryTo} className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors">
+            <Link to={secondaryTo as string} className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors">
               {secondaryLabel}
             </Link>
           </div>
