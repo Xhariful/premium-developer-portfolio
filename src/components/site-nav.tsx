@@ -48,7 +48,7 @@ export function SiteNav() {
           <span className="inline-grid place-items-center size-9 rounded-full bg-primary text-primary-foreground font-display font-bold transition-transform group-hover:scale-110">
             {profile.name.charAt(0)}
           </span>
-          <span className="font-display text-lg tracking-tight uppercase">{profile.name.split(" ")[0]}.dev</span>
+          <span className="font-display text-lg tracking-tight uppercase">{profile.name.split(" ")[0]}</span>
         </Link>
 
         {/* Desktop nav */}

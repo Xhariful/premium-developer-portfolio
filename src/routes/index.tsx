@@ -211,7 +211,7 @@ function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {previewServices.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.05}>
-                <div className="group h-full p-8 rounded-3xl border border-border bg-card hover:bg-surface hover:border-primary/40 transition-all hover:-translate-y-1">
+                <div className=" hover:shadow-custom-glow group h-full p-8 rounded-3xl border border-border bg-card hover:bg-surface hover:border-primary/40 transition-all hover:-translate-y-1">
                   <div className="size-12 rounded-2xl bg-primary/10 text-primary grid place-items-center mb-6 group-hover:scale-110 transition-transform">
                     <span className="font-mono font-bold text-sm">0{i + 1}</span>
                   </div>
