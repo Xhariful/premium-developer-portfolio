@@ -14,8 +14,8 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 export const profile = {
-  name: "Alex Vaughan",
-  role: "Senior Full-Stack Developer",
+  name: "Shariful Islam",
+  role: "Website Developer",
   // Rotating headlines shown by the typing animation in the hero
   headlines: [
     "I build premium digital experiences.",
@@ -26,23 +26,23 @@ export const profile = {
   tagline:
     "Senior Full-Stack Developer specialising in high-performance React applications and premium web experiences for international clients.",
   location: "Remote · Serving Clients Worldwide",
-  email: "hello@alexvaughan.dev", // TODO: replace with real inbox
-  phone: "+1 (555) 010-2024", // TODO: replace or remove
-  whatsapp: "+15550102024",
+  email: "sharifulpc04@gmail.com", // TODO: replace with real inbox
+  phone: "+880196964104", // TODO: replace or remove
+  whatsapp: "+8801996954104",
   resumeUrl: "/resume.pdf", // TODO: put resume PDF in /public
   socials: {
-    github: "https://github.com/alex-vaughan",
+    github: "https://github.com/xhariful",
     linkedin: "https://linkedin.com/in/alex-vaughan",
     twitter: "https://twitter.com/alex_vaughan",
-    instagram: "https://instagram.com/alex.vaughan",
+    instagram: "https://instagram.com/sharif_ul_islam",
   },
 };
 
 export const stats = [
-  { value: 8, suffix: "+", label: "Years Experience" },
-  { value: 120, suffix: "+", label: "Projects Completed" },
-  { value: 65, suffix: "+", label: "Happy Clients" },
-  { value: 25, suffix: "+", label: "Countries Served" },
+  { value: 2, suffix: "+", label: "Years Experience" },
+  { value: 150, suffix: "+", label: "Projects Completed" },
+  { value: 100, suffix: "+", label: "Happy Clients" },
+  { value: 20, suffix: "+", label: "Countries Served" },
 ];
 
 export const skillCategories = [
