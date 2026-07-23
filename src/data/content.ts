@@ -33,7 +33,7 @@ export const profile = {
   socials: {
     github: "https://github.com/xhariful",
     linkedin: "https://linkedin.com/in/alex-vaughan",
-    twitter: "https://twitter.com/alex_vaughan",
+    twitter: "https://twitter.com/shariful150215",
     instagram: "https://instagram.com/sharif_ul_islam",
   },
 };
