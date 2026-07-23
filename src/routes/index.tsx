@@ -49,7 +49,7 @@ function HomePage() {
       <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-24">
         {/* Background image + gradient overlay */}
         <div className="absolute inset-0 -z-10">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-70" width={1920} height={1200} />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-90" width={1920} height={1200} />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
 
@@ -71,7 +71,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .8, delay: 0.1 }}
-            className="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] max-w-5xl"
+            className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] max-w-5xl italic gradient-text"
           >
             <TypingHeadline phrases={profile.headlines} />
           </motion.h1>
@@ -80,7 +80,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed"
+            className="mt-10 max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed"
           >
             {profile.tagline}
           </motion.p>

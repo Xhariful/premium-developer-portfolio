@@ -11,13 +11,13 @@ export function TypingHeadline({ phrases, className }: { phrases: readonly strin
 
   useEffect(() => {
     const current = phrases[index % phrases.length];
-    const speed = deleting ? 30 : 55;
+    const speed = deleting ? 50 : 100;
 
     const timeout = setTimeout(() => {
       if (!deleting) {
         setText(current.slice(0, text.length + 1));
         if (text.length + 1 === current.length) {
-          setTimeout(() => setDeleting(true), 2000);
+          setTimeout(() => setDeleting(true), 3000);
         }
       } else {
         setText(current.slice(0, text.length - 1));

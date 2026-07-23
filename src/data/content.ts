@@ -18,13 +18,19 @@ export const profile = {
   role: "Website Developer",
   // Rotating headlines shown by the typing animation in the hero
   headlines: [
-    "I build premium digital experiences.",
-    "I engineer high-performance React applications.",
-    "I ship products that scale internationally.",
-    "I design systems for demanding clients.",
+    "I engineer high-performance Python & Shopify solutions.",
+    "I lead teams and architect scalable e-commerce systems.",
+    "I design custom roadmaps and solve complex web challenges.",
+    "I build enterprise-grade digital experiences that convert.",
   ],
+  // headlines: [
+  //   "I build premium digital experiences.",
+  //   "I engineer high-performance React applications.",
+  //   "I ship products that scale internationally.",
+  //   "I design systems for demanding clients.",
+  // ],
   tagline:
-    "Senior Full-Stack Developer specialising in high-performance React applications and premium web experiences for international clients.",
+    "Senior Full-Stack Developer & Team Lead specializing in high-performance Python/Django backends, custom Shopify solutions, and premium web experiences for international clients.",
   location: "Remote · Serving Clients Worldwide",
   email: "sharifulpc04@gmail.com", // TODO: replace with real inbox
   phone: "+880196964104", // TODO: replace or remove
