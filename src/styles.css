@@ -180,3 +180,16 @@
 @utility shadow-elevated {
   box-shadow: var(--shadow-card);
 }
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-spin {
+  animation: border-spin 3s linear infinite;
+}

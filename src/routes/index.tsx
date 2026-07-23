@@ -115,8 +115,8 @@ function HomePage() {
       </section>
 
       {/* ---------------- STATS ---------------- */}
-      <section className="border-y border-border py-16 px-6 bg-surface/40">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="border-y border-border py-16 px-6 ">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
             <StatCounter key={s.label} {...s} />
           ))}
@@ -129,7 +129,7 @@ function HomePage() {
           <Reveal>
             <div className="relative aspect-[4/5] max-w-md rounded-3xl overflow-hidden border border-border glow">
               <img src={portrait} alt={profile.name} className="w-full h-full object-cover" width={900} height={1100} loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              <div className="absolute inset-0 from-background/60 to-transparent" />
             </div>
           </Reveal>
 
