@@ -11,8 +11,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiDownload, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
-import heroBg from "@/assets/hero-bg.jpg";
-import portrait from "@/assets/portrait.jpg";
+import heroBg from "@/assets/myhero.jpg";
+import portrait from "@/assets/Shariful.jpg";
 import { TypingHeadline } from "@/components/animated/typing-headline";
 import { StatCounter } from "@/components/animated/stat-counter";
 import { Reveal } from "@/components/animated/reveal";
@@ -49,7 +49,7 @@ function HomePage() {
       <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-24">
         {/* Background image + gradient overlay */}
         <div className="absolute inset-0 -z-10">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" width={1920} height={1200} />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-70" width={1920} height={1200} />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
 
@@ -70,7 +70,7 @@ function HomePage() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: .8, delay: 0.1 }}
             className="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] max-w-5xl"
           >
             <TypingHeadline phrases={profile.headlines} />
@@ -136,7 +136,7 @@ function HomePage() {
           <Reveal delay={0.1}>
             <span className="text-xs font-mono uppercase tracking-[0.3em] text-primary">About Me</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tighter leading-tight">
-              A senior engineer who cares about <span className="italic gradient-text">craft</span>.
+              A senior <span className="italic gradient-text">Enginner</span> who cares about <span className="italic gradient-text">craft</span>.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               For nearly a decade I've built products for founders, agencies, and Fortune 500s. My focus is on the

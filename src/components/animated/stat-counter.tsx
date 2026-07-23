@@ -23,7 +23,7 @@ export function StatCounter({ value, suffix = "", label }: { value: number; suff
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="flex flex-col"
+      className="flex flex-col items-center"
     >
       <div className="flex items-baseline gap-1">
         <motion.span className="font-display text-4xl md:text-5xl font-bold tabular-nums">{rounded}</motion.span>
