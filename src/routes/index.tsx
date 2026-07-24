@@ -11,7 +11,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiDownload, FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
-import heroBg from "@/assets/myhero.jpg";
+import heroDesktop from "@/assets/hero-desktop.jpg";
+import heroMobile from "@/assets/hero-mobile.jpg";
+
 import portrait from "@/assets/Shariful.jpg";
 import { TypingHeadline } from "@/components/animated/typing-headline";
 import { StatCounter } from "@/components/animated/stat-counter";
@@ -49,9 +51,19 @@ function HomePage() {
       <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-24">
         {/* Background image + gradient overlay */}
         <div className="absolute inset-0 -z-10">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-90" width={1920} height={1200} />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={heroMobile} />
+            <img
+              src={heroDesktop}
+              alt=""
+              className="w-full h-full object-cover opacity-90"
+              width={1920}
+              height={1200}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
         </div>
+
 
         <div className="max-w-7xl mx-auto px-6 w-full">
           <motion.div
