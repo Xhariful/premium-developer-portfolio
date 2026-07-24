@@ -21,6 +21,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { GlowFilters } from "@/components/animated/GlowFilters";
 import { profile } from "@/data/content";
 
 function NotFoundComponent() {
@@ -138,6 +139,8 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
+        {/* Global SVG filter defs — required by .glow-border-* utilities. */}
+        <GlowFilters />
         <div className="min-h-screen flex flex-col">
           <SiteNav />
           <main className="flex-1">
