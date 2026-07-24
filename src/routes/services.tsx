@@ -66,10 +66,12 @@ function ServicesPage() {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {workingProcess.map((p, i) => (
               <Reveal key={p.step} delay={i * 0.05}>
-                <div className="p-8 rounded-2xl border border-border bg-card h-full">
-                  <div className="font-display text-5xl font-extrabold gradient-text mb-4">{p.step}</div>
-                  <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                <div className={`glow-border-${(i % 9) + 1} h-full`} style={{ ["--b" as string]: "3px" }}>
+                  <div className="p-8 rounded-2xl bg-card h-full">
+                    <div className="font-display text-5xl font-extrabold gradient-text mb-4">{p.step}</div>
+                    <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
