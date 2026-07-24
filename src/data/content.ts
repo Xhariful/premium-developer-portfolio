@@ -54,46 +54,108 @@ export const stats = [
 
 export const skillCategories = [
   {
+    id: "shopify",
+    title: "Shopify & E-commerce",
+    skills: [
+      { name: "Shopify Store Development", level: 95, years: 3 },
+      { name: "Shopify Theme Customization", level: 94, years: 3 },
+      { name: "Liquid Template Language", level: 92, years: 3 },
+      { name: "Shopify Theme Architecture", level: 88, years: 2 },
+      { name: "Store Setup & Configuration", level: 95, years: 3 },
+      { name: "Product, Collection & Inventory Management", level: 94, years: 3 },
+      { name: "Navigation, Menu & Filters Setup", level: 92, years: 3 },
+      { name: "Shopify App Integration", level: 90, years: 3 },
+      { name: "Metafields & Metaobjects", level: 88, years: 2 },
+      { name: "Shopify SEO Optimization", level: 88, years: 3 },
+      { name: "Shopify Performance Optimization", level: 86, years: 2 },
+      { name: "Store Migration (Woo/Custom → Shopify)", level: 85, years: 2 },
+      { name: "Shopify Partner Dashboard", level: 90, years: 3 },
+      { name: "Development Stores Management", level: 92, years: 3 },
+    ],
+  },
+  {
     id: "frontend",
     title: "Frontend",
     skills: [
-      { name: "React.js", level: 78, years: 2 },
-      { name: "TypeScript", level: 40, years: 1 },
-      { name: "Tailwind CSS", level: 96, years: 2 },
-      { name: "Framer Motion", level: 90, years: 1 },
+      { name: "HTML5", level: 96, years: 3 },
+      { name: "CSS3", level: 94, years: 3 },
+      { name: "Tailwind CSS", level: 92, years: 2 },
+      { name: "Bootstrap", level: 88, years: 3 },
+      { name: "JavaScript (Basic to Intermediate)", level: 70, years: 2 },
+      { name: "Responsive Web Design", level: 94, years: 3 },
     ],
   },
   {
     id: "backend",
-    title: "Backend",
+    title: "Backend & Programming",
     skills: [
-      { name: "Python Django", level: 88, years: 2 },
-      { name: "Node.js", level: 82, years: 1 },
-      { name: "PostgreSQL", level: 88, years: 1.5 },
-      { name: "GraphQL", level: 85, years: 2 },
-      { name: "Cloudflare", level: 82, years: 2 },
-    ],
-  },
-  {
-    id: "cms",
-    title: "CMS & E-commerce",
-    skills: [
-      { name: "Shopify (Liquid)", level: 90, years: 2.5 },
-      { name: "WordPress", level: 66, years: 2 },
-      { name: "Wix", level: 64, years: 2 },
+      { name: "Python", level: 82, years: 2 },
+      { name: "Django", level: 80, years: 2 },
+      { name: "REST API Integration", level: 82, years: 2 },
+      { name: "PostgreSQL", level: 78, years: 2 },
     ],
   },
   {
     id: "tools",
-    title: "Tools & DevOps",
+    title: "Tools & Version Control",
     skills: [
-      { name: "Git / GitHub", level: 96, years: 3 },
-      { name: "Docker", level: 80, years: 4 },
-      { name: "Figma", level: 88, years: 1 },
-      { name: "Canva", level: 88, years: 3 },
+      { name: "Git", level: 92, years: 3 },
+      { name: "GitHub", level: 92, years: 3 },
+      { name: "VS Code", level: 96, years: 3 },
+      { name: "Figma (Design to Development)", level: 86, years: 2 },
+    ],
+  },
+  {
+    id: "seo",
+    title: "SEO & Digital",
+    skills: [
+      { name: "On-page SEO", level: 88, years: 2 },
+      { name: "Rank Math SEO", level: 86, years: 2 },
+      { name: "Sitemap Setup", level: 88, years: 2 },
+      { name: "Google Search Console", level: 86, years: 2 },
+      { name: "Basic Technical SEO", level: 82, years: 2 },
+    ],
+  },
+  {
+    id: "management",
+    title: "Project Management & Business",
+    skills: [
+      { name: "Senior Executive — Shopify", level: 95, years: 2 },
+      { name: "Team Coordination", level: 92, years: 2 },
+      { name: "Junior Developer Support", level: 90, years: 2 },
+      { name: "Client Communication", level: 94, years: 3 },
+      { name: "Requirement Analysis", level: 90, years: 2 },
+      { name: "Task Management", level: 92, years: 2 },
+      { name: "Project Planning", level: 88, years: 2 },
+      { name: "Data Sheet Management", level: 90, years: 2 },
+      { name: "Quality Checking (QA)", level: 92, years: 2 },
+      { name: "Problem Solving", level: 92, years: 3 },
+    ],
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio-Based Expertise",
+    skills: [
+      { name: "Multivendor E-commerce Development", level: 88, years: 2 },
+      { name: "Portfolio Website Development", level: 92, years: 2 },
+      { name: "Visa Consultancy Website Development", level: 88, years: 2 },
+      { name: "150+ Project Experience", level: 96, years: 3 },
+    ],
+  },
+  {
+    id: "soft",
+    title: "Soft Skills",
+    skills: [
+      { name: "Leadership", level: 92, years: 3 },
+      { name: "Time Management", level: 94, years: 3 },
+      { name: "Fast Learning Ability", level: 96, years: 3 },
+      { name: "Client Handling", level: 92, years: 3 },
+      { name: "Communication Skills", level: 94, years: 3 },
+      { name: "Team Management", level: 90, years: 2 },
     ],
   },
 ];
+
 
 export const services = [
   {
