@@ -34,20 +34,22 @@ function ServicesPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.05}>
-              <div className="group h-full p-8 rounded-3xl border border-border bg-card hover:bg-surface hover:border-primary/40 transition-all hover:-translate-y-1">
-                <div className="size-12 rounded-2xl bg-primary/10 text-primary grid place-items-center mb-6 font-mono font-bold group-hover:scale-110 transition-transform">
-                  0{i + 1}
+              <div className={`glow-border-${(i % 9) + 1} h-full`} style={{ ["--b" as string]: "3px" }}>
+                <div className="group h-full p-8 rounded-2xl bg-card hover:bg-surface transition-all">
+                  <div className="size-12 rounded-2xl bg-primary/10 text-primary grid place-items-center mb-6 font-mono font-bold group-hover:scale-110 transition-transform">
+                    0{i + 1}
+                  </div>
+                  <h3 className="font-display text-xl font-bold mb-3">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">{s.description}</p>
+                  <ul className="space-y-2">
+                    {s.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-sm">
+                        <FiCheck className="text-primary shrink-0 mt-1" />
+                        <span className="text-muted-foreground">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="font-display text-xl font-bold mb-3">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">{s.description}</p>
-                <ul className="space-y-2">
-                  {s.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm">
-                      <FiCheck className="text-primary shrink-0 mt-1" />
-                      <span className="text-muted-foreground">{f}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </Reveal>
           ))}
@@ -64,10 +66,12 @@ function ServicesPage() {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {workingProcess.map((p, i) => (
               <Reveal key={p.step} delay={i * 0.05}>
-                <div className="p-8 rounded-2xl border border-border bg-card h-full">
-                  <div className="font-display text-5xl font-extrabold gradient-text mb-4">{p.step}</div>
-                  <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                <div className={`glow-border-${(i % 9) + 1} h-full`} style={{ ["--b" as string]: "3px" }}>
+                  <div className="p-8 rounded-2xl bg-card h-full">
+                    <div className="font-display text-5xl font-extrabold gradient-text mb-4">{p.step}</div>
+                    <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
