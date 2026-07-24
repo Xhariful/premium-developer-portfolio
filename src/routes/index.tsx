@@ -11,8 +11,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiDownload, FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
-import heroDesktop from "@/assets/hero-desktop.jpg";
-import heroMobile from "@/assets/hero-mobile.jpg";
+import heroDesktop from "@/assets/myhero.jpg";
+import heroMobile from "@/assets/myhero2.jpg";
 
 import portrait from "@/assets/Shariful.jpg";
 import { TypingHeadline } from "@/components/animated/typing-headline";
@@ -138,7 +138,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- ABOUT PREVIEW ---------------- */}
-      <section className="py-32 px-6">
+      <section className="Py-24 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative aspect-[4/5] max-w-md rounded-3xl overflow-hidden border border-border glow">
@@ -171,7 +171,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SKILLS PREVIEW ---------------- */}
-      <section className="py-32 px-6 bg-surface/30 border-y border-border">
+      <section className="Py-24 px-6 bg-surface/30 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -206,7 +206,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SERVICES PREVIEW ---------------- */}
-      <section className="py-32 px-6">
+      <section className="Py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -239,7 +239,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
-      <section className="py-32 px-6 bg-surface/30 border-y border-border">
+      <section className="Py-24 px-6 bg-surface/30 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -264,7 +264,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- ACHIEVEMENTS PREVIEW ---------------- */}
-      <section className="py-32 px-6">
+      <section className="Py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>

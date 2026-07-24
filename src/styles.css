@@ -57,11 +57,11 @@
 :root {
   --radius: 0.75rem;
 
-  --background: oklch(0.09 0.005 260);            /* #0A0A0B */
+  --background: oklch(0.09 0.005 260);             /* #0A0A0B */
   --foreground: oklch(0.93 0.02 250);             /* platinum */
   --platinum: oklch(0.93 0.02 250);
 
-  --surface: oklch(0.15 0.006 260);               /* #161618 */
+  --surface: oklch(0.15 0.006 260);                /* #161618 */
   --surface-2: oklch(0.19 0.008 260);
 
   --card: oklch(0.13 0.006 260);
@@ -69,7 +69,7 @@
   --popover: oklch(0.13 0.006 260);
   --popover-foreground: oklch(0.93 0.02 250);
 
-  --primary: oklch(0.65 0.19 255);                /* electric blue #3B82F6 */
+  --primary: oklch(0.65 0.19 255);                 /* electric blue #3B82F6 */
   --primary-foreground: oklch(0.09 0.005 260);
   --secondary: oklch(0.22 0.01 260);
   --secondary-foreground: oklch(0.93 0.02 250);
@@ -126,7 +126,6 @@
   --gradient-radial: radial-gradient(ellipse at top, oklch(0.55 0.2 255 / 0.12), transparent 60%);
   --shadow-glow: 0 0 60px -10px oklch(0.55 0.2 255 / 0.25);
   --shadow-card: 0 30px 60px -15px oklch(0 0 0 / 0.12);
-
 }
 
 @layer base {
@@ -179,6 +178,40 @@
 
 @utility shadow-elevated {
   box-shadow: var(--shadow-card);
+}
+
+/* ---------- Snake Border Utility ---------------------------------------- */
+
+@utility border-snake {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px; /* বর্ডারের পুরুত্ব */
+  --snake-color: var(--color-primary); /* ডিফল্ট কালার হিসেবে Primary ব্যবহার হবে */
+}
+
+.border-snake::before {
+  content: '';
+  position: absolute;
+  width: 175%;
+  height: 175%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 70%,
+    var(--snake-color) 100%
+  );
+  animation: border-spin 4s linear infinite;
+}
+
+.border-snake > * {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-card);
 }
 
 @keyframes border-spin {

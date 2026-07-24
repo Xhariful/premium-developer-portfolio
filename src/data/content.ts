@@ -53,7 +53,33 @@ export const stats = [
 ];
 
 export const skillCategories = [
+
   {
+    id: "frontend",
+    title: "Frontend",
+    skills: [
+      { name: "HTML5", level: 96, years: 3 },
+      { name: "CSS3", level: 94, years: 3 },
+      { name: "Tailwind CSS", level: 92, years: 2 },
+      { name: "Bootstrap", level: 88, years: 3 },
+      { name: "JavaScript (Basic to Intermediate)", level: 70, years: 2 },
+      { name: "React.js", level: 74, years: 2 },
+      { name: "Responsive Web Design", level: 94, years: 3 },
+    ],
+  },
+  {
+    id: "backend",
+    title: "Backend & Programming",
+    skills: [
+      { name: "Python", level: 82, years: 2 },
+      { name: "Django", level: 80, years: 2 },
+      { name: "REST API Integration", level: 82, years: 2 },
+      { name: "PostgreSQL", level: 78, years: 2 },
+      { name: "TypeScript", level: 58, years: 1 },
+      { name: "Next.js", level: 65, years: 1 },
+    ],
+  },
+    {
     id: "shopify",
     title: "Shopify & E-commerce",
     skills: [
@@ -71,28 +97,6 @@ export const skillCategories = [
       { name: "Store Migration (Woo/Custom → Shopify)", level: 85, years: 2 },
       { name: "Shopify Partner Dashboard", level: 90, years: 3 },
       { name: "Development Stores Management", level: 92, years: 3 },
-    ],
-  },
-  {
-    id: "frontend",
-    title: "Frontend",
-    skills: [
-      { name: "HTML5", level: 96, years: 3 },
-      { name: "CSS3", level: 94, years: 3 },
-      { name: "Tailwind CSS", level: 92, years: 2 },
-      { name: "Bootstrap", level: 88, years: 3 },
-      { name: "JavaScript (Basic to Intermediate)", level: 70, years: 2 },
-      { name: "Responsive Web Design", level: 94, years: 3 },
-    ],
-  },
-  {
-    id: "backend",
-    title: "Backend & Programming",
-    skills: [
-      { name: "Python", level: 82, years: 2 },
-      { name: "Django", level: 80, years: 2 },
-      { name: "REST API Integration", level: 82, years: 2 },
-      { name: "PostgreSQL", level: 78, years: 2 },
     ],
   },
   {
