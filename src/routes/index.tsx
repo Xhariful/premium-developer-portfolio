@@ -9,7 +9,7 @@
  */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiDownload, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiArrowUpRight, FiDownload, FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 import heroBg from "@/assets/myhero.jpg";
 import portrait from "@/assets/Shariful.jpg";
@@ -106,9 +106,11 @@ function HomePage() {
             </a>
 
             <div className="hidden sm:flex items-center gap-2 ml-2">
-              <SocialLink href={profile.socials.github}><FiGithub /></SocialLink>
-              <SocialLink href={profile.socials.linkedin}><FiLinkedin /></SocialLink>
+              <SocialLink href={profile.socials.facebook}><FiFacebook /></SocialLink>
+              <SocialLink href={profile.socials.instagram}><FiInstagram /></SocialLink>
               <SocialLink href={profile.socials.twitter}><FiTwitter /></SocialLink>
+              <SocialLink href={profile.socials.linkedin}><FiLinkedin /></SocialLink>
+              <SocialLink href={profile.socials.github}><FiGithub /></SocialLink>
             </div>
           </motion.div>
         </div>

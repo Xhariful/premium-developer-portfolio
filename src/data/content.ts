@@ -38,8 +38,9 @@ export const profile = {
   resumeUrl: "/resume.pdf", // TODO: put resume PDF in /public
   socials: {
     github: "https://github.com/xhariful",
-    linkedin: "https://linkedin.com/in/alex-vaughan",
+    linkedin: "https://linkedin.com/in/#",
     twitter: "https://twitter.com/shariful150215",
+    facebook: "https://facebook.com/shariful.islam.19755",
     instagram: "https://instagram.com/sharif_ul_islam",
   },
 };
