@@ -226,3 +226,87 @@
 .animate-border-spin {
   animation: border-spin 3s linear infinite;
 }
+
+
+/* ---------- GlowBorderCard.tsx 9 border color animation ---------------------------------------- */
+@property --a {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateBorder {
+  to { 
+    --a: 1turn; 
+  }
+}
+
+.glow-animated-border {
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: 
+    repeating-conic-gradient(
+      from var(--a, 0deg), 
+      var(--l, #0000 0% 70%, #0000ff7f)
+    ) border-box;
+  animation: rotateBorder 2s linear infinite;
+}
+
+
+/* গ্লোয়িং বর্ডার বাটন স্টাইল */
+.glow-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 2px; /* বর্ডারের পুরুত্ব */
+  overflow: hidden;
+  background: linear-gradient(90deg, #3b82f6, #ec4899, #3b82f6);
+  background-size: 200% 200%;
+  animation: glowBorderAnim 3s linear infinite;
+}
+
+@keyframes glowBorderAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glow-btn-wrapper button {
+  background-color: var(--color-background); /* তোমার ওয়েবসাইটের ব্যাকগ্রাউন্ড কালার */
+  color: var(--color-foreground);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}

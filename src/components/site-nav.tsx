@@ -12,6 +12,7 @@ import { profile } from "@/data/content";
 import { useTheme } from "./theme-provider";
 import { cn } from "@/lib/utils";
 import logoImage from "@/assets/onlyshariful.webp";
+import { GlowBorderCard, glowPresets } from "./animated/GlowBorderCard";
 
 const links = [
   { to: "/", label: "Home" },
@@ -148,15 +149,18 @@ export function SiteNav() {
                       </Link>
                     </motion.div>
                   ))}
-                  <button
-                    onClick={() => {
-                      toggle();
-                    }}
-                    className="mt-6 inline-flex items-center gap-2 self-start px-4 py-2 border border-border rounded-full text-sm"
-                  >
-                    {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-                    {theme === "dark" ? "Light mode" : "Dark mode"}
-                  </button>
+<div className="btn-glow-effect relative p-[2px] rounded-full inline-block overflow-hidden" style={{ background: 'linear-gradient(90deg, #3b82f6, #ec4899, #06b6d4, #3b82f6)', backgroundSize: '200% 200%' }}>
+  <button
+    onClick={() => {
+      // তোমার টগল বা ক্লিক ফাংশন
+    }}
+    className="relative px-5 py-2 rounded-full text-sm font-medium bg-background text-foreground flex items-center gap-2 cursor-pointer"
+  >
+    {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+    {theme === "dark" ? "Light mode" : "Dark mode"}
+  </button>
+</div>
+
                 </nav>
               </motion.div>
             )}

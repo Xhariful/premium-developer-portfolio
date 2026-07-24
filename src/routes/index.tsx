@@ -239,29 +239,62 @@ function HomePage() {
       </section>
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
-      <section className="Py-24 px-6 bg-surface/30 border-y border-border">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <Reveal>
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Portfolio</span>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tighter">Selected Work</h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
-                View all projects <FiArrowUpRight />
-              </Link>
-            </Reveal>
-          </div>
+<section className="py-24 px-6 bg-surface/30 border-y border-border">
+      {/* Hidden SVG Filter for Electric Border Effect */}
+      <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
+        <defs>
+          <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+            <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+              <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+            </feOffset>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {featured.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 0.1}>
-                <FeaturedProjectCard project={p} />
-              </Reveal>
-            ))}
-          </div>
+            <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+            <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+              <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+            </feOffset>
+
+            <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+            <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+              <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+            </feOffset>
+
+            <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+            <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+              <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+            </feOffset>
+
+            <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+            <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+            <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+
+            <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="20" xChannelSelector="R" yChannelSelector="B" />
+          </filter>
+        </defs>
+      </svg>
+
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <Reveal>
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-primary">Portfolio</span>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tighter">Selected Work</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+              View all projects <FiArrowUpRight />
+            </Link>
+          </Reveal>
         </div>
-      </section>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {featured.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 0.1}>
+              <FeaturedProjectCard project={p} />
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* ---------------- ACHIEVEMENTS PREVIEW ---------------- */}
       <section className="Py-24 px-6">
@@ -346,20 +379,45 @@ function FeaturedProjectCard({ project }: { project: (typeof projects)[number] }
       rel="noopener noreferrer"
       className="group block"
     >
-      <div className="overflow-hidden rounded-3xl border border-border bg-surface aspect-[16/10] mb-6 relative">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          width={1400}
-          height={900}
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="absolute top-4 right-4 size-10 rounded-full bg-background/80 backdrop-blur-md border border-border grid place-items-center opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all">
-          <FiArrowUpRight />
+      {/* Outer Card Container */}
+      <div className="relative p-[2px] rounded-3xl overflow-visible mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+        
+        {/* Background Ambient Glow */}
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-primary/40 via-transparent to-primary/20 blur-xl opacity-30 group-hover:opacity-60 transition-opacity pointer-events-none" />
+
+        {/* Inner Structure for Border Effect */}
+        <div className="relative w-full aspect-[16/10] rounded-3xl">
+          
+          {/* 1. Only this border layer gets the Electric Turbulent Filter */}
+          <div 
+            className="absolute inset-0 rounded-3xl border-2 border-primary pointer-events-none z-20"
+            style={{ filter: 'url(#turbulent-displace)' }}
+          />
+
+          {/* 2. Extra Glow Layers for Electric Shine */}
+          <div className="absolute inset-0 rounded-3xl border-2 border-primary/50 blur-[1px] pointer-events-none z-10" />
+          <div className="absolute inset-0 rounded-3xl border-2 border-primary/30 blur-[4px] pointer-events-none z-10" />
+
+          {/* 3. Clean Content Container (Image stays completely clear and unaffected) */}
+          <div className="absolute inset-0 overflow-hidden rounded-[22px] bg-surface z-0 m-[2px]">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              width={1400}
+              height={900}
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute top-4 right-4 size-10 rounded-full bg-background/80 backdrop-blur-md border border-border grid place-items-center opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all">
+              <FiArrowUpRight />
+            </div>
+          </div>
+
         </div>
       </div>
+
+      {/* Project Info */}
       <div className="flex justify-between items-start gap-4">
         <div>
           <div className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{project.category}</div>
