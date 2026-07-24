@@ -277,39 +277,84 @@
 
 @utility glow-border-1 {
   --l: #ff45457f, #00ff997f, #006aff7f, #ff00957f, #ff45457f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-2 {
   --l: #0000 0% 35%, #24004619, #3c096c32, #5a189a4b, #7b2cbf64, #9d4edd7f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-3 {
   --l: #cb997e7f, #ffe8d67f, #a5a58d7f, #6b705c7f, #cb997e7f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-4 {
   --l: #0000 0%, #f7258520, #7209b740, #3a0ca360, #4361ee7f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-5 {
   --l: #7bdff27f, #b2f7ef7f, #eff7f67f, #f7d6e07f, #f2b5d47f, #7bdff27f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-6 {
   --l: #0000 0% 85%, #936bff7f 0%, #b892ff7f, #ffc2e27f, #ff90b37f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-7 {
   --l: #7801167f, #f7b5387f, #db7c267f, #d8572a7f, #c32f277f, #7801167f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-8 {
   --l: #0000 0% 25%, #f3b70019 0%, #faa30032, #e57c044b, #ff620164, #f63e027f 50%;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 @utility glow-border-9 {
   --l: #00ffcc7f, #ff00ff7f, #ffff007f, #00ffcc7f;
-  @apply glow-border;
+  box-sizing: border-box;
+  border: solid var(--b, 6px) #0000;
+  border-radius: calc(2 * var(--b, 6px));
+  background: repeating-conic-gradient(from var(--a, 0deg), var(--l)) border-box;
+  filter: url(#glow-1);
+  animation: rotateBorder 2s linear infinite;
 }
 
 /* Alternate softer glow filter (id="glow-0") */
