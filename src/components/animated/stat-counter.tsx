@@ -22,28 +22,24 @@ export function StatCounter({ value, suffix = "", label }: { value: number; suff
       transition={{ duration: 0.6 }}
       className="relative flex flex-col items-center justify-center p-[3px] rounded-2xl bg-[#1e293b] overflow-hidden"
     >
-      {/* ১. কনসিস্ট্যান্ট গতির রোটেশন লেয়ার */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl pointer-events-none flex items-center justify-center">
+      {/* ১. নিখুঁত ও সুষম রোটেশন লেয়ার */}
+      <div className="absolute inset-[-50%] overflow-hidden pointer-events-none flex items-center justify-center">
         <div 
-          className="absolute w-[200%] h-[200%]"
+          className="w-[300px] h-[300px]"
           style={{
-            background: 'conic-gradient(from 0deg, #8F5EF0 0%, #4E86FC 50%, transparent 70%)',
+            background: 'conic-gradient(from 0deg at 50% 50%, #8F5EF0 0deg, #4E86FC 180deg, transparent 270deg, transparent 360deg)',
             animation: 'rotateBorder 4s linear infinite',
-            transformOrigin: 'center center',
           }}
         />
       </div>
 
-      {/* ২. গ্লোয়িং বা ব্লার ইফেক্ট */}
-      <div 
-        className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl pointer-events-none flex items-center justify-center opacity-70 blur-[12px] z-0"
-      >
+      {/* ২. গ্লোয়িং বা ব্লার ইফেক্ট */}
+      <div className="absolute inset-[-50%] overflow-hidden pointer-events-none flex items-center justify-center opacity-70 blur-[12px] z-0">
         <div 
-          className="absolute w-[200%] h-[200%]"
+          className="w-[300px] h-[300px]"
           style={{
-            background: 'conic-gradient(from 0deg, #8F5EF0 0%, #4E86FC 50%, transparent 70%)',
+            background: 'conic-gradient(from 0deg at 50% 50%, #8F5EF0 0deg, #4E86FC 180deg, transparent 270deg, transparent 360deg)',
             animation: 'rotateBorder 4s linear infinite',
-            transformOrigin: 'center center',
           }}
         />
       </div>
@@ -57,13 +53,13 @@ export function StatCounter({ value, suffix = "", label }: { value: number; suff
         <span className="mt-2 text-[18px] font-mono uppercase tracking-widest text-slate-400">{label}</span>
       </div>
 
-      {/* ৪. পারফেক্ট লিনিয়ার কিফ্রেম */}
+      {/* ৪. পারফেক্ট রোটেশন কিফ্রেম */}
       <style>{`
         @keyframes rotateBorder {
-          from {
+          0% {
             transform: rotate(0deg);
           }
-          to {
+          100% {
             transform: rotate(360deg);
           }
         }

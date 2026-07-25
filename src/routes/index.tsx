@@ -129,7 +129,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- STATS ---------------- */}
-      <section className="border-y border-border py-16 px-6 ">
+      <section className=" py-16 px-6 ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
             <StatCounter key={s.label} {...s} />
@@ -138,7 +138,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- ABOUT PREVIEW ---------------- */}
-      <section className="Py-24 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative aspect-[4/5] max-w-md rounded-3xl overflow-hidden border border-border glow">
@@ -171,7 +171,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SKILLS PREVIEW ---------------- */}
-      <section className="Py-24 px-6 bg-surface/30 border-y border-border">
+      <section className="py-20 px-6 bg-surface/30 ">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -206,7 +206,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SERVICES PREVIEW ---------------- */}
-      <section className="Py-24 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -239,9 +239,9 @@ function HomePage() {
       </section>
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
-<section className="py-24 px-6 bg-surface/30 border-y border-border">
+<section className="py-20 px-6 bg-surface/30 ">
       {/* Hidden SVG Filter for Electric Border Effect */}
-      <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
+      {/* <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
         <defs>
           <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
             <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
@@ -271,7 +271,7 @@ function HomePage() {
             <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="20" xChannelSelector="R" yChannelSelector="B" />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
 
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -297,7 +297,7 @@ function HomePage() {
     </section>
 
       {/* ---------------- ACHIEVEMENTS PREVIEW ---------------- */}
-      <section className="Py-24 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>

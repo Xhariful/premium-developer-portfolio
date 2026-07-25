@@ -22,7 +22,7 @@ export function CtaSection({
   secondaryTo?: string;
 }) {
   return (
-    <section className="relative py-32 px-6 overflow-hidden border-t border-border">
+    <section className="relative py-32 px-6 overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"

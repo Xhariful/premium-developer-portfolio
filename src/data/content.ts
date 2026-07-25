@@ -73,6 +73,7 @@ export const skillCategories = [
     skills: [
       { name: "Python", level: 82, years: 2 },
       { name: "Django", level: 80, years: 2 },
+      { name: "Shopify Liquid", level: 95, years: 2 },
       { name: "REST API Integration", level: 82, years: 2 },
       { name: "PostgreSQL", level: 78, years: 2 },
       { name: "TypeScript", level: 58, years: 1 },
