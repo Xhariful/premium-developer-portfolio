@@ -64,7 +64,7 @@ export function SiteNav() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <nav className="hidden lg:flex items-center gap-8 text-lg font-medium">
               {links.map((l) => {
                 const active = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
                 return (
@@ -97,12 +97,20 @@ export function SiteNav() {
               >
                 {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
               </button>
-              <Link
+              {/* <Link
                 to="/contact"
-                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
+                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full text-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
               >
                 Let's Talk
-              </Link>
+              </Link> */}
+              <a
+                href="https://wa.me/8801570242928?text=Hi%20Shariful,%20I%20want%20to%20discuss%20a%20project%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full text-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
+              >
+                Let's Talk
+              </a>
               <button
                 aria-label="Open menu"
                 className="lg:hidden inline-grid place-items-center size-10 rounded-full border border-border"

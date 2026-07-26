@@ -129,7 +129,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- STATS ---------------- */}
-      <section className=" py-16 px-6 ">
+      <section className=" py-10 md:py-20 px-6 ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
             <StatCounter key={s.label} {...s} />
@@ -138,7 +138,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- ABOUT PREVIEW ---------------- */}
-      <section className="py-20 px-6">
+      <section className="py-10 md:py-20 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative aspect-[4/5] max-w-md rounded-3xl overflow-hidden border border-border glow">
@@ -171,7 +171,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SKILLS PREVIEW ---------------- */}
-      <section className="py-20 px-6 bg-surface/30 ">
+      <section className="py-10 md:py-20 px-6 bg-surface/30 ">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -179,7 +179,7 @@ function HomePage() {
               <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tighter">Technical Arsenal</h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <Link to="/skills" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+              <Link to="/skills" className="hover:shadow-custom-glow text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 border border-border/50 hover:border-primary px-4 py-2 rounded-lg">
                 View all skills <FiArrowUpRight />
               </Link>
             </Reveal>
@@ -188,7 +188,7 @@ function HomePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {featuredSkills.map((cat, i) => (
               <Reveal key={cat.id} delay={i * 0.1}>
-                <div className="p-8 rounded-3xl border border-border bg-card hover:border-primary/40 transition-colors">
+                <div className="hover:shadow-custom-glow p-8 rounded-3xl border border-border bg-card hover:border-primary/40 transition-colors">
                   <div className="flex items-center gap-3 mb-6">
                     <span className="font-mono text-xs text-primary">0{i + 1}</span>
                     <h3 className="font-display text-2xl font-bold">{cat.title}</h3>
@@ -206,7 +206,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- SERVICES PREVIEW ---------------- */}
-      <section className="py-20 px-6">
+      <section className="py-10 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>
@@ -216,7 +216,7 @@ function HomePage() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+              <Link to="/services" className="hover:shadow-custom-glow text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 border border-border/50 hover:border-primary px-4 py-2 rounded-lg">
                 View all services <FiArrowUpRight />
               </Link>
             </Reveal>
@@ -239,7 +239,7 @@ function HomePage() {
       </section>
 
       {/* ---------------- FEATURED PROJECTS ---------------- */}
-<section className="py-20 px-6 bg-surface/30 ">
+      <section className="py-10 md:py-20 px-6 bg-surface/30 ">
       {/* Hidden SVG Filter for Electric Border Effect */}
       {/* <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
         <defs>
@@ -280,7 +280,7 @@ function HomePage() {
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tighter">Selected Work</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+            <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 border border-border/50 hover:border-primary px-4 py-2 rounded-lg">
               View all projects <FiArrowUpRight />
             </Link>
           </Reveal>
@@ -297,7 +297,7 @@ function HomePage() {
     </section>
 
       {/* ---------------- ACHIEVEMENTS PREVIEW ---------------- */}
-      <section className="py-20 px-6">
+      <section className="py-10 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <Reveal>

@@ -80,7 +80,7 @@ export const skillCategories = [
       { name: "Next.js", level: 65, years: 1 },
     ],
   },
-    {
+  {
     id: "shopify",
     title: "Shopify & E-commerce",
     skills: [
@@ -114,11 +114,11 @@ export const skillCategories = [
     id: "seo",
     title: "SEO & Digital",
     skills: [
-      { name: "On-page SEO", level: 88, years: 2 },
-      { name: "Rank Math SEO", level: 86, years: 2 },
-      { name: "Sitemap Setup", level: 88, years: 2 },
-      { name: "Google Search Console", level: 86, years: 2 },
-      { name: "Basic Technical SEO", level: 82, years: 2 },
+      { name: "On-page SEO", level: 88, years: 1 },
+      { name: "Rank Math SEO", level: 86, years: 1 },
+      { name: "Sitemap Setup", level: 88, years: 1 },
+      { name: "Google Search Console", level: 86, years: 1 },
+      { name: "Basic Technical SEO", level: 82, years: 1 },
     ],
   },
   {
@@ -128,7 +128,7 @@ export const skillCategories = [
       { name: "Senior Executive — Shopify", level: 95, years: 2 },
       { name: "Team Coordination", level: 92, years: 2 },
       { name: "Junior Developer Support", level: 90, years: 2 },
-      { name: "Client Communication", level: 94, years: 3 },
+      { name: "Client Communication", level: 94, years: 2 },
       { name: "Requirement Analysis", level: 90, years: 2 },
       { name: "Task Management", level: 92, years: 2 },
       { name: "Project Planning", level: 88, years: 2 },
@@ -144,7 +144,7 @@ export const skillCategories = [
       { name: "Multivendor E-commerce Development", level: 88, years: 2 },
       { name: "Portfolio Website Development", level: 92, years: 2 },
       { name: "Visa Consultancy Website Development", level: 88, years: 2 },
-      { name: "150+ Project Experience", level: 96, years: 3 },
+      { name: "150+ E-commerce Project Experience", level: 96, years: 3 },
     ],
   },
   {
